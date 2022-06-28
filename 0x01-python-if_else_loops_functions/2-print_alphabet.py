@@ -1,0 +1,3 @@
+#!/bin/bash/python3
+for k in range (97,123):
+    print(f"{k:c}",end="")
