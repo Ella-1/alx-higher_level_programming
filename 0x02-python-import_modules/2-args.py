@@ -1,17 +1,21 @@
 #!/usr/bin/python3
+import sys
 
-if __name__ == "__main__":
-    import sys
+if __name__ == '__main__':
+    """Prints the argument list passed to the program
+    The program takes all the arguments starting from the second
+    and prints the number of arguments and their value
+    """
+    av = sys.argv
+    l_av = len(av) - 1
 
-    argv = sys.argv
-    count = len(argv) - 1
-
-    if count == 0:
-        print("0 arguments.")
-    elif count == 1:
-        print("1 argument:")
-        print("1: {}".format(argv[count]))
-    else:
-        print("{} arguments:".format(count))
-        for x in range(count):
-            print("{}: {}".format(x + 1, argv[x + 1]))
+    if l_av > 1:
+        print(l_av, 'arguments:')
+        for i in range(1, l_av + 1):
+            print('{:d}: {}'.format(i, av[i]))
+    elif l_av == 1:
+        print(l_av, 'argument:')
+        for i in range(1, l_av + 1):
+            print('{:d}: {}'.format(i, av[i]))
+    elif l_av == 0:
+        print(l_av, 'arguments.')
