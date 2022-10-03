@@ -6,7 +6,7 @@ if (size) {
   for (let i = 0; i < square; ++i) {
     let j = 0;
 
-    for (; j < size; ++j) {
+    for (; j < square; ++j) {
       process.stdout.write('X');
     }
 
