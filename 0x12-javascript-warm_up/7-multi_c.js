@@ -3,9 +3,9 @@
 const limits = parseInt(process.argv[2]);
 
 if (limits) {
-	for (let i = 0; i< limits; ++i) {
-		console.log('C is fun');
-	}
+  for (let i = 0; i < limits; ++i) {
+    console.log('C is fun');
+  }
 } else {
-	console.log('Missing number of occurrences');
+  console.log('Missing number of occurrences');
 }
