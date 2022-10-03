@@ -1,4 +1,4 @@
-#!/bin/usr/node
+#!/usr/bin/ode
 
 console.log("C is fun");
 console.log("Python is cool");
