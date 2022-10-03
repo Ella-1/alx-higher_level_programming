@@ -2,7 +2,7 @@
 
 const square = parseInt(process.argv[2]);
 
-if (size) {
+if (square) {
   for (let i = 0; i < square; ++i) {
     let j = 0;
 
