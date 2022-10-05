@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-module.exports = class {
+module.export = class {
 	constructor(width, height) {
 		this.width = width;
 		this.height = height;
