@@ -1,18 +1,10 @@
 #!/usr/bin/python3
-"""Fetches the URL: https://alx-intranet.hbtn.io/status
-"""
-
-from urllib.request import Request, urlopen
-
-
+""" Python script that takes in a URL, sends a request to the URL and displays the value of the X-Request-Id variable found in the header of the response. """
 if __name__ == "__main__":
-    req = Request('https://alx-intranet.hbtn.io/status')
+    import urllib.request
+    from sys import argv
 
-    with urlopen(req) as res:
-        content = res.read()
-        utf8_content = content.decode('utf-8')
-
-        print('Body response:')
-        print('\t- type: {_type}'.format(_type=type(content)))
-        print('\t- content: {_content}'.format(_content=content))
-        print('\t- utf8 content: {_utf8_c}'.format(_utf8_c=utf8_content))
+    with urllib.request.urlopen(argv[1]) as re:
+        information = re.information()
+        content = information.get('X-Request-Id')
+        print(content)
